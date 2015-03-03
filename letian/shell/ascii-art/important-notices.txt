@@ -1,0 +1,44 @@
+
+
+                  _..-------++._                    
+              _.-'/ |      _||  \"--._              
+        __.--'`._/_\j_____/_||___\    `----.        
+   _.--'_____    |          \     _____    /        
+ _j    /,---.\   |        =o |   /,---.\   |_       
+[__]==// .-. \\==`===========/==// .-. \\=[__]      
+  `-._|\ `-' /|___\_________/___|\ `-' /|_.'    
+        `---'                     `---'            
+	  
+          SOME IMPORTANT INFORMATION! 
+		  NOT SUPPORT CHINESE ~~~ SO YOU KNOW!
+          =======================================
+
+If Puppet did not blow up (you do not see a sea of red
+above), then your VM was generated successfully!
+
+* A unique private key was generated for you! It is located
+  at "letian/files/dot/ssh/id_rsa". If you are on Windows,
+  a PuTTY-friendly key was also generated at same location
+  with a ".ppk" extension.
+
+* If you want to use your own private key for future
+  provisions, overwrite the generated key above with your
+  own. Make sure to follow the naming pattern, and include a
+  ".pub" public key.
+
+* If you wish to add packages, modules, Apache/Nginx vhosts,
+  or anything else, open up "letian/config.yaml" and make
+  changes within! Some things will have random strings like
+  "DIdXRs2OI2LJ" - you must create a random string as well!
+  To do so, please apply face to keyboard and roll.
+
+* If you change "letian/config.yaml", simply run
+  "$ vagrant provision" and your VM will be updated with the
+  changes you requested!
+
+------------------------------------------------------------
+PLEASE REMEMBER TO INCLUDE THE CONTENTS OF YOUR
+"letian/config.yaml" FILE.
+------------------------------------------------------------
+
+Happy programming!
