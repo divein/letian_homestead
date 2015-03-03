@@ -20,7 +20,9 @@
 
 ### 一.设置执行环境
 
-#### 1.安装 virtualbox. 目前 guohe_homestead 只支持 virtualbox, 其他虚拟机支持看情况。。
+#### 1.安装 virtualbox. 
+
+目前 guohe_homestead 只支持 virtualbox, 其他虚拟机支持看情况。。
 
 下载地址:
 
