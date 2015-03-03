@@ -11,6 +11,7 @@
 * 支持 vagrant 启动时自定义脚本执行。 脚本放在 letian/files/exec-aways|exec-once|startup-always|startup-once 目录下。
 
 2. puppet 提供器支持的开发环境支持
+
 * 自动配置开发环境, namp开发环境，项目相应的 消息服务器， memache , redis配置
 * 开发者账号，版本库等内容管理
 * ...等等。。 
