@@ -79,21 +79,21 @@ Vagrant.configure(2) do |config|
     config.vm.provision :shell, :path => 'letian/shell/install-puppet.sh'
 
     # 对 puppet provision 进行设置,（还没写完，puppet 正在学习中。。。)
-    # config.vm.provision :puppet do |puppet|
-    #    puppet.facter = {
-    #      'ssh_username'     => "#{ssh_username}",
-    #      'provisioner_type' => ENV['VAGRANT_DEFAULT_PROVIDER'],
-    #      'vm_target_key'    => 'vagrantfile-local',
-    #    }
-    #    puppet.manifests_path = "#{data['vm']['provision']['puppet']['manifests_path']}"
-    #    puppet.manifest_file  = "#{data['vm']['provision']['puppet']['manifest_file']}"
-    #    puppet.module_path    = "#{data['vm']['provision']['puppet']['module_path']}"
+    config.vm.provision :puppet do |puppet|
+        puppet.facter = {
+          'ssh_username'     => "#{ssh_username}",
+          'provisioner_type' => ENV['VAGRANT_DEFAULT_PROVIDER'],
+          'vm_target_key'    => 'vagrantfile-local',
+        }
+        puppet.manifests_path = "#{data['vm']['provision']['puppet']['manifests_path']}"
+        puppet.manifest_file  = "#{data['vm']['provision']['puppet']['manifest_file']}"
+        puppet.module_path    = "#{data['vm']['provision']['puppet']['module_path']}"
       
         # 如果有其他选项，设置一下
     #    if !data['vm']['provision']['puppet']['options'].empty?
     #        puppet.options = data['vm']['provision']['puppet']['options']
     #    end
-    #end
+    end
   
     # 只会执行一次 , 有点小bug , 先注释掉
     #config.vm.provision :shell do |s|

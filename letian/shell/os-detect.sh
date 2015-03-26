@@ -1,18 +1,15 @@
 #!/bin/bash
 # =============================================
-# 脚本，用来确定系统信息
-# 
+# os-detect
+#
 # @author wangxinyi <divein@126.com>
 # ==============================================
-
 TYPE=$(echo "$1" | tr '[A-Z]' '[a-z]')
 OS=$(uname)
 ID='unknown'
 CODENAME='unknown'
 RELEASE='unknown'
 ARCH='unknown'
-
-# detect centos
 grep 'centos' /etc/issue -i -q
 if [ $? = '0' ]; then
     ID='centos'
@@ -37,20 +34,15 @@ elif [ -f '/etc/issue' ]; then
       RELEASE=$(head -1 /etc/issue | cut -d " " -f2)
     fi
 fi
-
 declare -A info
-
 info[id]=$(echo "${ID}" | tr '[A-Z]' '[a-z]')
 info[codename]=$(echo "${CODENAME}" | tr '[A-Z]' '[a-z]')
 info[release]=$(echo "${RELEASE}" | tr '[A-Z]' '[a-z]')
 info[arch]=$(uname -m)
-
-if [ "${TYPE}" ] ; then
+if [ "${TYPE}" ]; then
     echo "${info[${TYPE}]}"
-
     exit 0
 fi
-
 echo -e "ID\t\t${info[id]}"
 echo -e "CODENAME\t${info[codename]}"
 echo -e "RELEASE\t\t${info[release]}"

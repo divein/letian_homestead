@@ -20,7 +20,7 @@ vagrantfile-local:
             # 和本地的端口映射
             forwarded_port:
                 ciYcTGpwijdU:
-                    host: '8069'
+                    host: '6630'
                     guest: '22'
         post_up_message: ''
         provider:
@@ -46,7 +46,7 @@ vagrantfile-local:
             qUtXosdv2eah:
                 owner: www-data
                 group: www-data
-                source: 'D:\\workspace\\dev\\webroot'
+                source: 'C:\\workspace\\dev\\webroot'
                 target: /var/www
                 sync_type: default
                 rsync:
